@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nexus Innovation | Consultoria em Transformação Digital</title>
+  <meta name="description" content="A Nexus Innovation acelera a transformação digital de empresas através de estratégias personalizadas, implementação de tecnologias emergentes e desenvolvimento de culturas inovadoras." />
+  <meta name="keywords" content="transformação digital, consultoria tech, inovação, inteligência artificial, IoT, cloud computing, estratégia digital" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.icons8.com/color/96/000000/innovation.png">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nexus Innovation | Consultoria em Transformação Digital">
+  <meta property="og:description" content="Aceleramos a transformação digital de empresas através de estratégias personalizadas e implementação de tecnologias emergentes.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&h=630&q=80">
+  
+  <style>
+    /* CORREÇÃO CRÍTICA: Garantir que textos sejam visíveis SEMPRE */
+    *[class*="reveal"],
+    *[class*="hidden"] {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateY(0) !important;
+    }
+    
+    /* Remover qualquer animação que esconda texto */
+    .hidden {
+      opacity: 1 !important;
+    }
+    
+    /* Garantir que partículas não cubram texto */
+    .particles-container {
+      z-index: 1 !important;
+    }
+    
+    .hero-content, .section-header, .sobre-content, .servicos-grid, .cases-grid, .contato-content, .footer-content {
+      position: relative;
+      z-index: 2 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-brand">
+        <a href="#hero" class="logo">
+          <i class="fas fa-bolt"></i>
+          <span>Nexus<span class="highlight">Innovation</span></span>
+        </a>
+      </div>
+      
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <div class="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">Home</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li class="dropdown">
+            <a href="#servicos" class="nav-link">Serviços <i class="fas fa-chevron-down"></i></a>
+            <div class="dropdown-menu">
+              <a href="#estrategia">Estratégia Digital</a>
+              <a href="#tech">Implementação Tech</a>
+              <a href="#inovacao">Cultura de Inovação</a>
+            </div>
+          </li>
+          <li><a href="#cases" class="nav-link">Cases</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+        
+        <a href="#contato" class="btn btn-primary nav-btn">Fale Conosco</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Transformação Digital que <span class="highlight">Gera Resultados</span></h1>
+        <p class="hero-text">Aceleramos a evolução digital de empresas através de estratégias personalizadas, tecnologias emergentes e culturas inovadoras.</p>
+        <div class="hero-buttons">
+          <a href="#contato" class="btn btn-primary">Comece sua Transformação</a>
+          <a href="#servicos" class="btn btn-secondary">Conheça nossos Serviços</a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <div class="tech-icons">
+          <i class="fas fa-robot" data-tooltip="Sistemas & IA"></i>
+          <i class="fas fa-cloud" data-tooltip="Cloud Computing"></i>
+          <i class="fas fa-chart-line" data-tooltip="Monitoramento de Dados"></i>
+          <i class="fas fa-mobile-alt" data-tooltip="Mobile First"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+ <!-- NOVA SEÇÃO SOBRE - DESIGN MODERNO -->
+<section id="sobre" class="sobre section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">Quem Somos</span>
+      <h2 class="section-title">Conectando <span class="highlight">Tecnologia</span> e <span class="highlight">Negócios</span> para Criar o Futuro</h2>
+    </div>
+    
+    <div class="sobre-grid">
+      <!-- Card 1: Missão -->
+      <div class="sobre-card missao">
+        <div class="card-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3>Nossa Missão</h3>
+        <p>Impulsionar a transformação digital de empresas através de soluções inovadoras que geram valor real e crescimento sustentável.</p>
+        <div class="card-detail">
+          <span>Foco em Resultados</span>
+        </div>
+      </div>
+      
+      <!-- Card 2: Visão -->
+      <div class="sobre-card visao">
+        <div class="card-icon">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h3>Nossa Visão</h3>
+        <p>Ser a principal referência em consultoria de transformação digital na América Latina até 2028.</p>
+        <div class="card-detail">
+          <span>Liderança Regional</span>
+        </div>
+      </div>
+      
+      <!-- Card 3: Valores -->
+      <div class="sobre-card valores">
+        <div class="card-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Nossos Valores</h3>
+        <ul class="valores-list">
+          <li><i class="fas fa-check"></i> Inovação Constante</li>
+          <li><i class="fas fa-check"></i> Transparência</li>
+          <li><i class="fas fa-check"></i> Excelência</li>
+          <li><i class="fas fa-check"></i> Parceria</li>
+        </ul>
+      </div>
+      
+      <!-- Estatísticas -->
+      <div class="sobre-stats">
+        <div class="stats-container">
+          <div class="stat-item">
+            <div class="stat-number" data-count="10">0</div>
+            <div class="stat-bar">
+              <div class="stat-progress" style="width: 100%"></div>
+            </div>
+            <p>Anos de Experiência</p>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="150">0</div>
+            <div class="stat-bar">
+              <div class="stat-progress" style="width: 90%"></div>
+            </div>
+            <p>Projetos Concluídos</p>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="45">0</div>
+            <div class="stat-bar">
+              <div class="stat-progress" style="width: 85%"></div>
+            </div>
+            <p>Clientes Satisfeitos</p>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-number" data-count="98">0</div>
+            <div class="stat-number-suffix">%</div>
+            <div class="stat-bar">
+              <div class="stat-progress" style="width: 98%"></div>
+            </div>
+            <p>Taxa de Sucesso</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Diferenciais -->
+    <div class="sobre-diferenciais">
+      <h3 class="diferenciais-title">O Que Nos Diferencia</h3>
+      <div class="diferenciais-grid">
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <div class="icon-circle">
+              <i class="fas fa-brain"></i>
+            </div>
+          </div>
+          <h4>Expertise Técnica</h4>
+          <p>Equipe com certificações nas principais tecnologias do mercado.</p>
+        </div>
+        
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <div class="icon-circle">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+          </div>
+          <h4>Soluções Criativas</h4>
+          <p>Abordamos cada desafio com uma perspectiva única e inovadora.</p>
+        </div>
+        
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <div class="icon-circle">
+              <i class="fas fa-handshake"></i>
+            </div>
+          </div>
+          <h4>Parceria Estratégica</h4>
+          <p>Trabalhamos como extensão da sua equipe, não como terceiros.</p>
+        </div>
+        
+        <div class="diferencial-item">
+          <div class="diferencial-icon">
+            <div class="icon-circle">
+              <i class="fas fa-rocket"></i>
+            </div>
+          </div>
+          <h4>Resultados Rápidos</h4>
+          <p>Metodologias ágeis que entregam valor desde as primeiras semanas.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- CTA dentro da seção -->
+    <div class="sobre-cta">
+      <div class="cta-content">
+        <h3>Pronto para Transformar sua Empresa?</h3>
+        <p>Vamos conversar sobre como podemos acelerar sua jornada digital.</p>
+        <a href="#contato" class="btn btn-primary">Agendar Consultoria Gratuita</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Serviços -->
+  <section id="servicos" class="servicos section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Nossos Serviços</span>
+        <h2 class="section-title">Soluções Completas para sua <span class="highlight">Jornada Digital</span></h2>
+      </div>
+      
+      <div class="servicos-grid">
+        <div class="servico-card" id="estrategia">
+          <div class="servico-icon">
+            <i class="fas fa-chess-queen"></i>
+          </div>
+          <h3 class="servico-title">Estratégia Digital</h3>
+          <p class="servico-text">Desenvolvemos roadmaps personalizados que alinham tecnologia, processos e pessoas aos objetivos de negócio.</p>
+          <ul class="servico-list">
+            <li><i class="fas fa-check"></i> Diagnóstico de Maturidade Digital</li>
+            <li><i class="fas fa-check"></i> Roadmap de Transformação</li>
+            <li><i class="fas fa-check"></i> Análise de ROI Tech</li>
+          </ul>
+        </div>
+        
+        <div class="servico-card" id="tech">
+          <div class="servico-icon">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <h3 class="servico-title">Implementação Tech</h3>
+          <p class="servico-text">Implementamos soluções tecnológicas que resolvem problemas reais e geram valor para o negócio.</p>
+          <ul class="servico-list">
+            <li><i class="fas fa-check"></i> Cloud Computing</li>
+            <li><i class="fas fa-check"></i> Inteligência Artificial</li>
+            <li><i class="fas fa-check"></i> IoT & Automação</li>
+          </ul>
+        </div>
+        
+        <div class="servico-card" id="inovacao">
+          <div class="servico-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="servico-title">Cultura de Inovação</h3>
+          <p class="servico-text">Desenvolvemos equipes e processos que promovem a inovação contínua como parte do DNA organizacional.</p>
+          <ul class="servico-list">
+            <li><i class="fas fa-check"></i> Workshops de Inovação</li>
+            <li><i class="fas fa-check"></i> Mentoria de Liderança Digital</li>
+            <li><i class="fas fa-check"></i> Programa de Intraempreendedorismo</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section id="cases" class="cases section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Cases de Sucesso</span>
+        <h2 class="section-title">Transformações que <span class="highlight">Inspiram</span></h2>
+      </div>
+      
+      <div class="cases-grid">
+        <div class="case-card" data-animate-on-scroll data-animate-delay="0">
+          <div class="case-header">
+            <span class="case-badge">Varejo</span>
+            <h3 class="case-title">E-commerce 3.0</h3>
+          </div>
+          <p class="case-text">Aumento de 240% nas vendas online através de plataforma personalizada e experiência do cliente otimizada.</p>
+          <div class="case-result">
+            <span><strong>+240%</strong> Vendas Online</span>
+            <span><strong>-35%</strong> Custos Operacionais</span>
+          </div>
+        </div>
+        
+        <div class="case-card" data-animate-on-scroll data-animate-delay="200">
+          <div class="case-header">
+            <span class="case-badge">Manufatura</span>
+            <h3 class="case-title">Indústria 4.0</h3>
+          </div>
+          <p class="case-text">Implementação de IoT e automação que reduziu desperdícios em 60% e aumentou produtividade em 45%.</p>
+          <div class="case-result">
+            <span><strong>+45%</strong> Produtividade</span>
+            <span><strong>-60%</strong> Desperdícios</span>
+          </div>
+        </div>
+        
+        <div class="case-card" data-animate-on-scroll data-animate-delay="400">
+          <div class="case-header">
+            <span class="case-badge">Saúde</span>
+            <h3 class="case-title">Telemedicina Inteligente</h3>
+          </div>
+          <p class="case-text">Plataforma de atendimento remoto com IA que aumentou em 300% o alcance geográfico da clínica.</p>
+          <div class="case-result">
+            <span><strong>+300%</strong> Alcance Geográfico</span>
+            <span><strong>40%</strong> Mais Eficiência</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Pronto para Transformar seu Negócio?</h2>
+        <p class="cta-text">Agende uma consultoria gratuita e descubra como podemos acelerar sua jornada digital.</p>
+        <a href="#contato" class="btn btn-primary btn-large">Agendar Consultoria Grátis</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="contato section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">Entre em Contato</span>
+        <h2 class="section-title">Vamos <span class="highlight">Conversar</span></h2>
+      </div>
+      
+      <div class="contato-content">
+        <div class="contato-info">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Endereço</h4>
+              <p>Av. Paulista, 1000 - São Paulo, SP</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Telefone</h4>
+              <p>(11) 9999-8888</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>contato@nexusinnovation.com</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <a href="#" data-tooltip="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" data-tooltip="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+        
+        <div class="contato-form">
+          <form id="form-contato">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome completo</label>
+              <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" placeholder="Seu melhor email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="telefone" class="form-label">Telefone</label>
+              <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone">
+            </div>
+            
+            <div class="form-group">
+              <label for="servico" class="form-label">Serviço de interesse</label>
+              <select id="servico" name="servico">
+                <option value="" disabled selected>Selecione um serviço</option>
+                <option value="estrategia">Estratégia Digital</option>
+                <option value="tech">Implementação Tech</option>
+                <option value="inovacao">Cultura de Inovação</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos sobre seu desafio..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+            
+            <div class="form-message" id="form-message"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <a href="#hero" class="logo">
+            <i class="fas fa-bolt"></i>
+            <span>Nexus<span class="highlight">Innovation</span></span>
+          </a>
+          <p>Transformando negócios através da inovação digital.</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#cases">Cases</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-services">
+          <h4>Serviços</h4>
+          <ul>
+            <li><a href="#estrategia">Estratégia Digital</a></li>
+            <li><a href="#tech">Implementação Tech</a></li>
+            <li><a href="#inovacao">Cultura de Inovação</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h4>Newsletter</h4>
+          <p>Receba insights sobre transformação digital.</p>
+          <form id="newsletter-form">
+            <input type="email" placeholder="Seu email" required>
+            <button type="submit" data-tooltip="Inscrever-se"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; <span id="current-year">2024</span> Nexus Innovation. Todos os direitos reservados.</p>
+        <p>Desenvolvido para portfólio - Inspirado no design da Fórmula Consultoria</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/5511999998888?text=Olá! Gostaria de saber mais sobre a Nexus Innovation" class="whatsapp-float" target="_blank" data-tooltip="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="assets/js/form.js"></script>
+  <script src="assets/js/animations.js"></script>
+  
+ 
+</body>
+
+</html>
