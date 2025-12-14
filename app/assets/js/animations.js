@@ -1,10 +1,8 @@
-// CORREÇÃO NO INÍCIO DO animations.js
 document.addEventListener('DOMContentLoaded', function () {
-  // GARANTIR QUE TEXTO NÃO DESAPAREÇA
+
   setTimeout(() => {
     const allElements = document.querySelectorAll('*');
     allElements.forEach(el => {
-      // Remover qualquer estilo que esconda
       if (el.style.opacity === '0') el.style.opacity = '1';
       if (el.style.visibility === 'hidden') el.style.visibility = 'visible';
       if (el.style.display === 'none') el.style.display = '';
@@ -772,7 +770,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // Debug: Log para verificar se animations.js carregou
-  console.log('✅ Animations.js carregado com sucesso!');
+  console.log('Animations.js carregado com sucesso!');
 });
 // Adicione este script para as animações da seção sobre
 document.addEventListener('DOMContentLoaded', function () {
@@ -804,6 +802,124 @@ document.addEventListener('DOMContentLoaded', function () {
 
           stat.classList.add('animated');
         });
+        // Verificação de dispositivo móvel (menor que 768px)
+        const isMobile = window.innerWidth < 768;
+
+        /* =================================================================
+           1. CONTROLE DE ANIMAÇÕES DE SCROLL (REVEAL)
+           =================================================================
+        */
+        const reveals = document.querySelectorAll('.reveal');
+        const diferenciais = document.querySelectorAll('.diferencial-item');
+
+        if (isMobile) {
+          // CORREÇÃO MOBILE: Mostra tudo imediatamente para evitar "buracos" no site
+          // Adiciona a classe 'active' para forçar a visibilidade definida no CSS
+          reveals.forEach(element => {
+            element.classList.add('active');
+            element.style.opacity = '1';
+            element.style.visibility = 'visible';
+            element.style.transform = 'translateY(0)';
+          });
+
+          // Remove o delay dos diferenciais no mobile para aparecerem instantaneamente
+          diferenciais.forEach(item => {
+            item.classList.add('active');
+            item.style.transitionDelay = '0s';
+            item.style.opacity = '1';
+            item.style.visibility = 'visible';
+            item.style.transform = 'translateY(0)';
+          });
+
+        } else {
+          // LÓGICA DESKTOP: Mantém as animações suaves
+          const observerOptions = {
+            threshold: 0.15, // Elemento precisa estar 15% visível para ativar
+            rootMargin: "0px 0px -50px 0px"
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Opcional: Para de observar após animar (melhora performance)
+                observer.unobserve(entry.target);
+              }
+            });
+          }, observerOptions);
+
+          // Observa elementos padrão
+          reveals.forEach(element => {
+            observer.observe(element);
+          });
+
+          // Observa itens diferenciais com delay (efeito cascata)
+          diferenciais.forEach((item, index) => {
+            // Adiciona delay apenas no desktop
+            item.style.transitionDelay = `${index * 0.2}s`;
+            observer.observe(item); // Usa o mesmo observer para ativar
+          });
+        }
+
+        /* =================================================================
+           2. CONTADORES ANIMADOS (NUMBERS)
+           Mantemos ativo no mobile, pois é leve e visualmente interessante
+           =================================================================
+        */
+        const statsSection = document.querySelector('.sobre-stats');
+        const numbers = document.querySelectorAll('.stat-number');
+        let started = false; // Garante que a animação só rode uma vez
+
+        if (statsSection && numbers.length > 0) {
+          const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting && !started) {
+                started = true;
+                numbers.forEach(num => {
+                  const target = parseInt(num.getAttribute('data-count'));
+                  const duration = 2000; // Duração da animação em ms
+                  const step = target / (duration / 16); // 60fps
+                  let current = 0;
+
+                  const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                      num.textContent = target;
+                      clearInterval(timer);
+                    } else {
+                      num.textContent = Math.floor(current);
+                    }
+                  }, 16);
+                });
+              }
+            });
+          }, { threshold: 0.5 }); // Só ativa quando 50% da seção estiver visível
+
+          statsObserver.observe(statsSection);
+        }
+
+        /* =================================================================
+           3. EFEITO PARALLAX NO HERO
+           Desativado no Mobile para economizar bateria e processamento
+           =================================================================
+        */
+        if (!isMobile) {
+          const hero = document.querySelector('.hero');
+          const icons = document.querySelectorAll('.tech-icons i');
+
+          if (hero && icons.length > 0) {
+            hero.addEventListener('mousemove', (e) => {
+              const x = (window.innerWidth - e.pageX * 2) / 90;
+              const y = (window.innerHeight - e.pageY * 2) / 90;
+
+              icons.forEach((icon, index) => {
+                const speed = (index + 1) * 0.5; // Velocidades diferentes para profundidade
+                icon.style.transform = `translateX(${x * speed}px) translateY(${y * speed}px)`;
+              });
+            });
+          }
+        }
+
 
         // Mostrar elementos com delay
         const cards = document.querySelectorAll('.sobre-card, .diferencial-item, .sobre-stats');
